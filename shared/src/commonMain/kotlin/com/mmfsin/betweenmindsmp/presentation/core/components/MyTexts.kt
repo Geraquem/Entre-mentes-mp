@@ -1,0 +1,182 @@
+package com.mmfsin.betweenmindsmp.presentation.core.components
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.TextUnit
+import betweenmindsmp.shared.generated.resources.Res
+import betweenmindsmp.shared.generated.resources.app_name
+import com.mmfsin.betweenmindsmp.presentation.core.theme.Black
+import org.jetbrains.compose.resources.StringResource
+import org.jetbrains.compose.resources.stringResource
+
+@Preview(showBackground = true)
+@Composable
+fun TextsPV() {
+    Column {
+        SmallText(text = Res.string.app_name)
+        MediumText(text = Res.string.app_name)
+        BigText(text = Res.string.app_name)
+    }
+}
+
+@Composable
+fun SmallText(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Black,
+    fontWeight: FontWeight = FontWeight.Normal,
+    gravity: TextAlign = TextAlign.Start,
+    fontSize: TextUnit = MaterialTheme.typography.bodySmall.fontSize,
+    fontFamily: FontFamily = FontFamily.SansSerif,
+    textDecoration: TextDecoration = TextDecoration.None,
+    allCaps: Boolean = false
+) {
+    Text(
+        modifier = modifier,
+        text = if (allCaps) text.uppercase() else text,
+        style = MaterialTheme.typography.bodySmall,
+        color = color,
+        fontWeight = fontWeight,
+        textDecoration = textDecoration,
+        textAlign = gravity,
+        fontSize = fontSize,
+        fontFamily = fontFamily
+    )
+}
+
+@Composable
+fun SmallText(
+    text: StringResource,
+    modifier: Modifier = Modifier,
+    color: Color = Black,
+    fontWeight: FontWeight = FontWeight.Normal,
+    gravity: TextAlign = TextAlign.Start,
+    fontSize: TextUnit = MaterialTheme.typography.bodySmall.fontSize,
+    fontFamily: FontFamily = FontFamily.SansSerif,
+    textDecoration: TextDecoration = TextDecoration.None,
+    allCaps: Boolean = false
+) {
+    val text = stringResource(text)
+    Text(
+        modifier = modifier,
+        text = if (allCaps) text.uppercase() else text,
+        style = MaterialTheme.typography.bodySmall,
+        color = color,
+        fontWeight = fontWeight,
+        textDecoration = textDecoration,
+        textAlign = gravity,
+        fontSize = fontSize,
+        fontFamily = fontFamily
+    )
+}
+
+@Composable
+fun MediumText(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Black,
+    fontWeight: FontWeight = FontWeight.Normal,
+    gravity: TextAlign = TextAlign.Start,
+    fontSize: TextUnit = MaterialTheme.typography.bodyLarge.fontSize,
+    fontFamily: FontFamily = FontFamily.SansSerif,
+    textDecoration: TextDecoration = TextDecoration.None,
+    allCaps: Boolean = false
+) {
+    Text(
+        modifier = modifier,
+        text = if (allCaps) text.uppercase() else text,
+        style = MaterialTheme.typography.bodyLarge,
+        color = color,
+        fontWeight = fontWeight,
+        textDecoration = textDecoration,
+        textAlign = gravity,
+        fontSize = fontSize,
+        fontFamily = fontFamily
+    )
+}
+
+@Composable
+fun MediumText(
+    text: StringResource,
+    modifier: Modifier = Modifier,
+    color: Color = Black,
+    fontWeight: FontWeight = FontWeight.Normal,
+    gravity: TextAlign = TextAlign.Start,
+    fontSize: TextUnit = MaterialTheme.typography.bodyLarge.fontSize,
+    fontFamily: FontFamily = FontFamily.SansSerif,
+    textDecoration: TextDecoration = TextDecoration.None,
+    allCaps: Boolean = false
+) {
+    val text = stringResource(text)
+    Text(
+        modifier = modifier,
+        text = if (allCaps) text.uppercase() else text,
+        style = MaterialTheme.typography.bodyLarge,
+        color = color,
+        fontWeight = fontWeight,
+        textDecoration = textDecoration,
+        textAlign = gravity,
+        fontSize = fontSize,
+        fontFamily = fontFamily
+    )
+}
+
+@Composable
+fun BigText(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Black,
+    fontWeight: FontWeight = FontWeight.Normal,
+    gravity: TextAlign = TextAlign.Start,
+    fontSize: TextUnit = MaterialTheme.typography.titleLarge.fontSize,
+    fontFamily: FontFamily = FontFamily.SansSerif,
+    textDecoration: TextDecoration = TextDecoration.None,
+    allCaps: Boolean = false
+) {
+    Text(
+        modifier = modifier,
+        text = if (allCaps) text.uppercase() else text,
+        style = MaterialTheme.typography.titleLarge,
+        color = color,
+        fontWeight = fontWeight,
+        textDecoration = textDecoration,
+        textAlign = gravity,
+        fontSize = fontSize,
+        fontFamily = fontFamily
+    )
+}
+
+@Composable
+fun BigText(
+    text: StringResource,
+    modifier: Modifier = Modifier,
+    color: Color = Black,
+    fontWeight: FontWeight = FontWeight.Normal,
+    gravity: TextAlign = TextAlign.Start,
+    fontSize: TextUnit = MaterialTheme.typography.titleLarge.fontSize,
+    fontFamily: FontFamily = FontFamily.SansSerif,
+    textDecoration: TextDecoration = TextDecoration.None,
+    allCaps: Boolean = false
+) {
+    val text = stringResource(text)
+    Text(
+        modifier = modifier,
+        text = if (allCaps) text.uppercase() else text,
+        style = MaterialTheme.typography.titleLarge,
+        color = color,
+        fontWeight = fontWeight,
+        textDecoration = textDecoration,
+        textAlign = gravity,
+        fontSize = fontSize,
+        fontFamily = fontFamily
+    )
+}

@@ -1,0 +1,9 @@
+package com.mmfsin.betweenmindsmp.presentation.menu
+
+data class MenuStates(
+    val isLoading: Boolean = true,
+    val positonButtons: Float = 500f,
+
+    val showSelectorSheet: Boolean = false,
+    val showSelectorScreen: Boolean = false
+)
